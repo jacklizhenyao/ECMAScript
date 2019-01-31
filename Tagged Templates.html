@@ -2,9 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //使用标签的字符创模板
+    let a = '1', b = '2', c = '3';
+
+    //使用字符串模板
+    //~波浪符号下的··
+    //注意 testWord以变量为分割符号，如果原始字符串的末尾为添加特殊字符，所以数组中最后一个字符串位空
+    let word = testWord`a的值是${a},b的值是${b},c的值是${c}!`;//testWord是标签
+
+    /* function testWord(strings, ...values) {
+     console.log(strings);//string字符串
+     console.log(values);//变量的值
+     }*/
+
+    //一般标签字符串这么使用
+
+    function testWord(strings, ...values) {
+        let result = '';
+        for (var i = 0; i < strings.length; i++) {
+            result += strings[i];
+            result += values[i];
+            console.log(result);
+        }
+        result += strings[strings.length - 1];
+        //console.log(strings);
+        // console.log(values);
+        return result;
+    }
+
+    console.log(word);
+
+</script>
 </body>
 </html>

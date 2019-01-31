@@ -2,9 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //解构数组
+    //数组的一般使用
+    function test() {
+        return ['1', '2', '3']
+    }
+
+    /*  var test = test(), a = test[0], b = test[1], c = test[2];
+
+     console.log(a)
+     console.log(b)
+     console.log(c)*/
+    //解构数组使用方式
+    let [a, b, c]=test();
+    console.log(a, b, c);
+</script>
+
 </body>
 </html>

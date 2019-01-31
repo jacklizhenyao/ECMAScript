@@ -2,9 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //块级作用域 --let 定义的变量 在块内有效，在块外无效 { }
+
+    if (true) {
+        //let s = "nihao";
+        s = "nihao";
+    }
+
+    console.log(s);
+
+</script>
 </body>
 </html>

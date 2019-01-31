@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
 </head>
 <body>
-$END$
+<script>
+    //解构对象 使用let关键字和大括号{}定义解构对象
+    function test() {
+        return {object1: "1", object2: "2", object3: "3"}
+    }
+
+    //为变量重新起名字
+    // let {newObject1:object1, newObject2:object2, newObject3:object3}=test();
+
+    //
+    let {object1, object2, object3}=test();
+
+    console.log(object1, object1, object1);
+</script>
+
 </body>
 </html>
