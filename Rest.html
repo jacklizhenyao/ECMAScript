@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //rest操作符 ... 放在函数参数中，表示可以接收更多的参数，这些参数放在数组中
+    function test(word, word1, ...words) {
+        console.log(word, word1, words);
+    }
+
+    test(1, "2", 3, 4);
+</script>
+
+
+</body>
+</html>
