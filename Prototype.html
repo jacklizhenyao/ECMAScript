@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Object.setPrototype() 方法有两个参数 可以复制一个已经存在的对象
+    //第一个参数 放入对象的名称 第二个参数 放入原型对象的名称
+    let functionA = {
+        food: 'cake'
+    }
+    let functionC = {
+        food: 'milk'
+    }
+    let functionB = Object.create(functionA);
+
+    /*  console.log(functionB);*/
+
+    //判断b函数的原型是否是a
+    /*  console.log(Object.getPrototypeOf(functionB) === functionA);*/
+
+    //重置函数的原型
+    Object.setPrototypeOf(functionB, functionC);
+    console.log(functionB.food);
+
+</script>
+</body>
+</html>
