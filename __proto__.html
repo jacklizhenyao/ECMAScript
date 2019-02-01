@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //prototype 为原型，可以把一个已经实现的对象 赋值给一个对象变量，这个对象便可以调用原型对象中的成员
+    //他们的关系是共享的关系
+
+    //对象 有个对象prototype 这个对象有两个属性__proto__ ,constructor
+
+    //__proto__ 对象都有这个属性 这个属性指向当前对象的原型对象 引用关系
+    //一个对象仅可以使用__proto__引用一个对象中的成员 一对一
+
+    let object1 = {
+        food1: 'cake',
+        name1(){
+            return 'object1'
+        }
+    };
+
+    let object2 = {
+        food: 'mini cake',
+        name2(){
+            return 'object2'
+        }
+    };
+
+    let object3 = {
+            __proto__: object2,
+            //name: 'object3'
+        }
+        ;
+    console.log(object3.name2());
+
+    //使用对象的__proto__方法 共享object1中的成员
+    object3.__proto__ = object1;
+
+    console.log(object3.name1());
+
+
+</script>
+
+</body>
+</html>
