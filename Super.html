@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+//
+<script>
+
+    let dinner = {
+        getDrink() {
+            return 'hot water';
+        }
+    };
+
+    //使用 __proto__ 共享dinner对象的成员getDrink
+    //创建getDrink方法 覆盖原型对象中的成员getDrink
+    //使用super调用原型方法中的getDrink方法
+
+    let food = {
+        __proto__: dinner,
+        getDrink() {
+            return 'food is ' + super.getDrink();
+        }
+    };
+
+    console.log(food.getDrink());
+
+</script>
+
+</body>
+</html>

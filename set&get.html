@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Chef {
+
+        //使用构造函数 construct方法 初始化类
+        //可以在构造方法中 初始化一些参数
+        constructor(food) {
+            this.food = food;
+            this.dish = [];
+        }
+
+        //类中的方法
+        cook() {
+            console.log(this.food);
+        }
+
+        //get 在方法名前添加 get关键字
+        get menu() {
+            return this.dish;
+        }
+
+        //set 在方法名前添加 set关键字
+        set menu(menue) {
+            this.dish.push(menue);
+        }
+
+    }
+
+    let chef = new Chef('toast');
+
+    //  错误的写法 ---》chef.menu('toast');
+
+    //使用get和set 需要对象.get/set方法名
+
+    chef.menu = 'toast';
+
+    console.log(chef.menu);
+
+
+</script>
+
+</body>
+</html>

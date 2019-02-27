@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //继承的类需要在构造方法中重写super方法 可以使用父类中的方法
+    class Person {
+
+        constructor(name, old) {
+            this.name = name;
+            this.old = old;
+        }
+
+        information() {
+            console.log(`姓名：${this.name}；年龄：${this.old}`)
+        }
+    }
+
+    class Chef extends Person {
+        constructor(name, old) {
+            super(name, old);
+        }
+    }
+
+    let jack = new Chef('jack', '19');
+
+    jack.information();
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //set集合 不可以添加重复元素
+
+    let desserts = new Set('nihaoni');//Set 中有5个元素
+
+    console.log(desserts.add('mn'));//添加一个元素mn
+
+    console.log(desserts);
+
+    // desserts.clear();//清空元素
+
+    //调用desserts的forEach函数 遍历set元素
+    //forEach 参数为箭头函数
+    desserts.forEach(eachOne => {
+        console.log(eachOne)
+    });
+    //console.log(desserts.size);
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //迭代器 Iterators
+    function chef(foods) {
+        //创建索引 i
+        let i = 0;
+
+        return {
+            //next（）为迭代方法
+            next(){
+
+                //返回布尔结果 如果为true 停止执行
+                let done = (i >= foods.length);
+
+                //返回当前游标指向的数据元素  如果done为false 取出结果 索引加一 继续遍历
+                let value = !done ? foods[i++] : undefined;
+
+                //返回的结果value
+                return {
+                    value: value,
+                    done: done
+                }
+            }
+        }
+
+    }
+    ;
+    let result = chef(['food1', 'food2']);
+    console.log(result.next());
+    console.log(result.next());
+</script>
+</body>
+</html>

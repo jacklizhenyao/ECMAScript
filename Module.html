@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+</head>
+
+
+<body>
+
+<script type="text/javascript" src="jspm_packages/system.js"></script>
+<script type="text/javascript" src="config.js"></script>
+
+
+<script>
+
+    //Module 模块 可以将应用分为众多模块
+
+    //自定义模块 使用 Export 将当前方法，类，对象等导出去 以供其他模块使用
+    //使用模块 在引用模块的文件里
+    // 使用 import（*代表所有） 导入模块中的方法，变量，对象 from  路径 （./modules/fuction1(文件名)）
+
+    //注意 使用es6的module模块功能 需要引入webpack或者jspm_packages库
+
+    //然后调用  System.import()
+   System.import();
+</script>
+
+</body>
+</html>
